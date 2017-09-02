@@ -23,8 +23,8 @@ else:
             code = split[1]
         env = {}
         for param in params:
-            if "=" in param:
-                split_param = param.split("=")
+            if "-" in param:
+                split_param = param.split("-")
                 env[split_param[0]] = eval(split_param[1])
             else:
                 env[param] = eval(input())
